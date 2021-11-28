@@ -24,7 +24,3 @@ TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${OpenCV_LIBS})
 ADD_EXECUTABLE(video ${SRC_VIDEO})
 TARGET_LINK_LIBRARIES(video ${OpenCV_LIBS})
 
-
-# Add tasks subprojects
-#include(main main.cpp main.h)
-#add_subprojects(${CMAKE_SOURCE_DIR})
