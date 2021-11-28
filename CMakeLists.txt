@@ -10,7 +10,7 @@ project(opencv_playground)
 
 set(CMAKE_CXX_STANDARD 20)
 
-FIND_PACKAGE(OpenCV 4.5.4 REQUIRED)
+FIND_PACKAGE(OpenCV 4 REQUIRED)
 MESSAGE("OpenCV version: ${OpenCV_VERSION}")
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIB_DIR})
