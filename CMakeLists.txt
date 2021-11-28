@@ -15,10 +15,14 @@ MESSAGE("OpenCV version: ${OpenCV_VERSION}")
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIB_DIR})
 
-SET(SRC main.cpp main.h)
+SET(SRC_SIMPLE simple/main.cpp simple/main.h)
+SET(SRC_VIDEO video/main.cpp video/main.h)
 
-ADD_EXECUTABLE(${PROJECT_NAME} ${SRC})
+ADD_EXECUTABLE(${PROJECT_NAME} ${SRC_SIMPLE})
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${OpenCV_LIBS})
+
+ADD_EXECUTABLE(video ${SRC_VIDEO})
+TARGET_LINK_LIBRARIES(video ${OpenCV_LIBS})
 
 
 # Add tasks subprojects
