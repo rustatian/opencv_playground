@@ -9,17 +9,19 @@ def remove_light(img, pattern):
     img = img - img.min()
     img = img / img.max() * 255
 
-    aux = 1 - (np.divide(img,pattern))
+    aux = 1 - (np.divide(img, pattern))
 
     cv.imshow("foo", aux)
     cv.waitKey(0)
     cv.destroyWindow("foo")
     return aux
 
+
 def calculate_pattern(img):
     height, width = img.shape[:2]
     bl = cv.blur(img, (height, width))
     return bl
+
 
 def run():
     img = cv.imread("../data/test_noise.pgm")
